@@ -1,0 +1,258 @@
+:root {
+  --hospital-navy: #0a2540;
+  --hospital-navy-dark: #071a2d;
+  --hospital-blue: #0d3b66;
+  --hospital-teal: #00a8cc;
+  --hospital-teal-dark: #028090;
+  --hospital-emerald: #10b981;
+  --hospital-amber: #f59e0b;
+  --hospital-red: #ef4444;
+  --hospital-bg: #f8fafc;
+  --hospital-card-bg: #ffffff;
+  --hospital-border: #e2e8f0;
+  --hospital-text-main: #1e293b;
+  --hospital-text-muted: #64748b;
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--hospital-bg);
+  color: var(--hospital-text-main);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Healthcare Utility Classes */
+.bg-navy {
+  background-color: var(--hospital-navy) !important;
+}
+
+.text-navy {
+  color: var(--hospital-navy) !important;
+}
+
+.bg-teal {
+  background-color: var(--hospital-teal) !important;
+}
+
+.text-teal {
+  color: var(--hospital-teal) !important;
+}
+
+.bg-light-blue {
+  background-color: #f0f7ff !important;
+}
+
+.bg-light-teal {
+  background-color: #e6f7f9 !important;
+}
+
+/* Navbar */
+.hospital-navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(10, 37, 64, 0.05);
+  border-bottom: 1px solid var(--hospital-border);
+  transition: all 0.3s ease;
+}
+
+.hospital-navbar .nav-link {
+  font-weight: 500;
+  color: var(--hospital-navy);
+  padding: 0.6rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.hospital-navbar .nav-link:hover,
+.hospital-navbar .nav-link.active {
+  color: var(--hospital-teal);
+  background-color: rgba(0, 168, 204, 0.08);
+}
+
+/* Buttons */
+.btn-hospital-primary {
+  background-color: var(--hospital-navy);
+  color: #ffffff;
+  border: 1px solid var(--hospital-navy);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-hospital-primary:hover {
+  background-color: var(--hospital-navy-dark);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(10, 37, 64, 0.2);
+}
+
+.btn-hospital-teal {
+  background-color: var(--hospital-teal);
+  color: #ffffff;
+  border: 1px solid var(--hospital-teal);
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-hospital-teal:hover {
+  background-color: var(--hospital-teal-dark);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 168, 204, 0.3);
+}
+
+.btn-hospital-outline {
+  background-color: transparent;
+  color: var(--hospital-navy);
+  border: 2px solid var(--hospital-navy);
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.btn-hospital-outline:hover {
+  background-color: var(--hospital-navy);
+  color: #ffffff;
+}
+
+/* Cards */
+.card-healthcare {
+  background: #ffffff;
+  border: 1px solid var(--hospital-border);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(10, 37, 64, 0.04);
+  transition: all 0.25s ease-in-out;
+}
+
+.card-healthcare:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(10, 37, 64, 0.08);
+  border-color: rgba(0, 168, 204, 0.3);
+}
+
+/* Hero Section */
+.hero-hospital {
+  background: linear-gradient(135deg, #0a2540 0%, #0d3b66 50%, #082f49 100%);
+  color: #ffffff;
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-hospital::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 168, 204, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Emergency Banner */
+.emergency-strip {
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+/* Badges */
+.badge-dept {
+  background-color: rgba(0, 168, 204, 0.12);
+  color: var(--hospital-teal-dark);
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.4rem 0.75rem;
+}
+
+.badge-symptom {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 0.25rem 0.65rem;
+  display: inline-block;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Footer */
+.hospital-footer {
+  background-color: var(--hospital-navy-dark);
+  color: #cbd5e1;
+  padding: 4rem 0 1.5rem;
+  margin-top: auto;
+}
+
+.hospital-footer a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hospital-footer a:hover {
+  color: var(--hospital-teal);
+}
+
+/* Forms */
+.form-control-hospital,
+.form-select-hospital {
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.65rem 0.95rem;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control-hospital:focus,
+.form-select-hospital:focus {
+  border-color: var(--hospital-teal);
+  box-shadow: 0 0 0 3px rgba(0, 168, 204, 0.18);
+}
+
+/* Print Rules for Patient Identification Cards */
+@media print {
+  header,
+  footer,
+  .no-print,
+  .nav-pills,
+  .btn,
+  .sticky-top {
+    display: none !important;
+  }
+
+  body, #root {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #printable-patient-card {
+    box-shadow: none !important;
+    border: 2px solid #0a2540 !important;
+    margin: 2rem auto !important;
+    max-width: 100% !important;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
